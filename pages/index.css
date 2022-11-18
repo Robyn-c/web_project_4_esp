@@ -1,7 +1,7 @@
 @import url(fonts/inter.css);
 
 .page {
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -52,6 +52,36 @@ body {
   .header__logo {
     padding-left: 27px;
   }
+}
+
+/* profile styles */
+.profile {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.profile__info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile__picture {
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+.profile__name {
+  margin-bottom: 8px;
+  font-weight: 500;
+  line-height: 1.14;
+  font-size: 42px;
+}
+
+.profile__about-me {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .popup {

@@ -17,15 +17,21 @@
       <img src="images/logo.svg" alt="" class="header__logo">
     </header>
     <section class="profile">
-      <img src="images/profile-pic.png" alt="" class="profile__picture">
-      <div>
-        <h1 class="profile__name">Jacques Cousteau</h1>
-        <p class="profile__about-me">Explorador</p>
-        <button src="profile__edit-button"></button>
+      <div class="profile__info">
+        <img src="images/profile-pic.png" alt="" class="profile__picture">
+        <div>
+          <h1 class="profile__name">Jacques Cousteau</h1>
+          <p class="profile__about-me">Explorador</p>
+        </div>
+        <button class="btn profile__edit-button">
+          <img src="images/edit-button.svg" alt="">
+        </button>
       </div>
-      <button class="profile__add-button"></button>
+      <button class="btn profile__add-button">
+        <img src="images/add-button.svg" alt="">
+      </button>
     </section>
-    <div class="popup popup_opened">
+    <div class="popup">
       <div class="popup__container">
         <h3 class="popup__title">Editar perfil</h3>
         <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt=""></button>
