@@ -20,19 +20,19 @@
       <div class="profile__info">
         <img src="images/profile-pic.png" alt="" class="profile__picture">
         <div>
-          <h1 class="profile__name">Jacques Cousteau</h1>
+          <h1 class="profile__name">Jacques Cousteau<button class="btn profile__edit-button">
+              <img src="images/edit-button.svg" alt="">
+            </button></h1>
           <p class="profile__about-me">Explorador</p>
         </div>
-        <button class="btn profile__edit-button">
-          <img src="images/edit-button.svg" alt="">
-        </button>
+
       </div>
       <button class="btn profile__add-button">
         <img src="images/add-button.svg" alt="">
       </button>
     </section>
     <div class="popup">
-      <div class="popup__container">
+      <form class="popup__container">
         <h3 class="popup__title">Editar perfil</h3>
         <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt=""></button>
         <div class="popup__text-container">
@@ -40,15 +40,57 @@
           <input type="text" class="popup__text" placeholder="Acerca de mí">
         </div>
         <button type="submit" class="btn popup__btn-save">Guardar</button>
-      </div>
+      </form>
     </div>
     <section class="cards">
       <article class="card">
-        <img src="" alt="" class="card__image">
-        <h3 class="card__title"></h3>
-        <button class="card__btn-like"></button>
+        <img src="images/yosemite.png" alt="" class="card__image">
+        <div class="card__text">
+          <h3 class="card__title">Valle de Yosemite</h3>
+          <button class="btn card__btn-like"><img src="images/like-button.svg" alt=""></button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/louise.png" alt="" class="card__image">
+        <div class="card__text">
+          <h3 class="card__title">Lago Louise
+          </h3>
+          <button class="btn card__btn-like"><img src="images/like-button.svg" alt=""></button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/calvas.png" alt="" class="card__image">
+        <div class="card__text">
+          <h3 class="card__title">Montañas Calvas
+          </h3>
+          <button class="btn card__btn-like"><img src="images/like-button.svg" alt=""></button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/latemar.png" alt="" class="card__image">
+        <div class="card__text">
+          <h3 class="card__title">Latemar</h3>
+          <button class="btn card__btn-like"><img src="images/like-button.svg" alt=""></button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/vanoise.png" alt="" class="card__image">
+        <div class="card__text">
+          <h3 class="card__title">Vanoise National Park</h3>
+          <button class="btn card__btn-like"><img src="images/like-button.svg" alt=""></button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/braies.png" alt="" class="card__image">
+        <div class="card__text">
+          <h3 class="card__title">Lago di Braies</h3>
+          <button class="btn card__btn-like"><img src="images/like-button.svg" alt=""></button>
+        </div>
       </article>
     </section>
+    <footer class="footer">
+      <p class="footer__text">© 2022 Alrededor de los EEUU</p>
+    </footer>
   </div>
   <script></script>
 </body>
