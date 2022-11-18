@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -7,12 +7,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="vendor/normalize.css">
   <link rel="stylesheet" href="pages/index.css">
-  <script src="script/script.js"></script>
+  <script src="scripts/script.js"></script>
   <title>Around the US</title>
 </head>
 
 <body>
-
+  <div class="page">
+    <header class="header">
+      <h1>Around The U.S.</h1>
+      <img src="images/logo.png" alt="" class="header__logo">
+    </header>
+    <section class="profile">
+      <img src="images/profile-pic.png" alt="" class="profile__picture">
+      <div>
+        <h2 class="profile__name">Jacques Cousteau</h2>
+        <p class="profile__about-me">Explorador</p>
+        <button src="profile__edit-button"></button>
+      </div>
+      <button class="profile__add-button"></button>
+    </section>
+    <div class="popup popup_opened">
+      <div class="popup__container">
+        <h3 class="popup__title">Editar perfil</h3>
+        <button class="btn popup__btn-close"><img src="images/Close Icon.png" alt=""></button>
+        <div class="popup__text-container">
+          <input type="text" class="popup__text" placeholder="Nombre">
+          <input type="text" class="popup__text" placeholder="Acerca de mí">
+        </div>
+        <button type="submit" class="btn popup__btn-save">Guardar</button>
+      </div>
+    </div>
+    <section class="cards">
+      <article class="card">
+        <img src="" alt="" class="card__image">
+        <h3 class="card__title"></h3>
+        <button class="card__btn-like"></button>
+      </article>
+    </section>
+  </div>
+  <script></script>
 </body>
 
 </html>
