@@ -1,9 +1,9 @@
 // Abrir y cerrar popup
-let popup = document.querySelector(".popup");
-let pageMask = document.querySelector(".page_mask");
+const popup = document.querySelector(".popup");
+const pageMask = document.querySelector(".page_mask");
 
-let editButton = document.querySelector(".profile__edit-button");
-let closeButton = document.querySelector(".popup__btn-close");
+const editButton = document.querySelector(".profile__edit-button");
+const closeButton = document.querySelector(".popup__btn-close");
 
 function openPopup(e) {
   popup.classList.add("popup_opened");
@@ -19,11 +19,11 @@ editButton.addEventListener("click", openPopup);
 closeButton.addEventListener("click", closePopup);
 
 // Texto en el value del input
-let username = document.querySelector(".profile__name");
-let userAboutMe = document.querySelector(".profile__about-me");
+const username = document.querySelector(".profile__name");
+const userAboutMe = document.querySelector(".profile__about-me");
 
-let fullName = document.querySelector("#name");
-let aboutMe = document.querySelector("#about-me");
+const fullName = document.querySelector("#name");
+const aboutMe = document.querySelector("#about-me");
 
 fullName.setAttribute("value", username.textContent);
 aboutMe.setAttribute("value", userAboutMe.textContent);
@@ -32,14 +32,14 @@ console.log(username.textContent);
 console.log(userAboutMe.textContent);
 
 // Formulario
-let formElement = document.querySelector(".popup__container");
+const formElement = document.querySelector(".popup__container");
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
   // Busquemos los campos del formulario en el DOM
-  let nameInput = document.querySelector("#name");
-  let jobInput = document.querySelector("#about-me");
+  const nameInput = document.querySelector("#name");
+  const jobInput = document.querySelector("#about-me");
 
   // Obtén los valores de cada campo desde la propiedad de valor correspondiente
   nameValue = nameInput.value;
