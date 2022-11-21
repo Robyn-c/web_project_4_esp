@@ -63,6 +63,12 @@ body {
   margin: 0 auto 50px;
 }
 
+.profile__text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px 18px;
+}
+
 .profile__info {
   display: flex;
   align-items: center;
@@ -74,8 +80,26 @@ body {
   border-radius: 50%;
 }
 
+.profile__edit-button {
+  transition: opacity 0.25s ease-in-out;
+  display: inline-block;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.profile__add-button {
+  transition: opacity 0.25s ease-in-out;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .profile__name {
-  margin-bottom: 8px;
   font-weight: 500;
   line-height: 1.14;
   font-size: 42px;
@@ -84,6 +108,21 @@ body {
 .profile__about-me {
   font-size: 18px;
   font-weight: 400;
+  flex-basis: 100%;
+}
+
+.page-mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.page-mask_opened {
+  display: block;
 }
 
 .popup {
@@ -93,28 +132,35 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
-  min-width: 282px;
+  min-width: 430px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
 
 .popup__container {
   position: relative;
-  padding: 25px 22px;
+  padding: 25px 36px;
   width: 100%;
 }
 
 .popup__btn-close {
+  width: 40px;
   position: absolute;
-  top: -35px;
-  right: 0;
+  top: -40px;
+  right: -40px;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.popup__btn-close:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .popup__title {
   color: #000000;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 900;
-  margin-bottom: 76px;
+  margin-bottom: 54px;
 }
 
 .popup__text-container {
@@ -125,15 +171,12 @@ body {
 }
 
 .popup__text {
+  padding-bottom: 14px;
   color: #000000;
   font-size: 14px;
   font-weight: 400;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.popup__text:focus {
-  outline: none;
 }
 
 .popup_opened {
@@ -142,13 +185,15 @@ body {
 
 .popup__btn-save {
   background-color: rgba(0, 0, 0, 1);
+  transition: background-color 0.25s ease-in-out;
   color: #ffffff;
   width: 100%;
   padding: 14px 0;
 }
 
 .popup__btn-save:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .cards {
