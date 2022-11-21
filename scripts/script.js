@@ -52,3 +52,12 @@ function handleProfileFormSubmit(evt) {
 }
 
 formElement.addEventListener("submit", handleProfileFormSubmit);
+
+// Rellenar corazon al hacer click
+const heartButton = document.querySelectorAll(".card__heart");
+
+heartButton.forEach((heart) => {
+  heart.addEventListener("click", function handleLikeButton(event) {
+    heart.classList.toggle("card__heart_liked");
+  });
+});
