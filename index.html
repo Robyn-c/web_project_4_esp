@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="vendor/normalize.css">
   <link rel="stylesheet" href="pages/index.css">
-  <script src="scripts/script.js"></script>
   <title>Around the US</title>
 </head>
 
@@ -19,25 +18,25 @@
     <section class="profile">
       <div class="profile__info">
         <img src="images/profile-pic.png" alt="" class="profile__picture">
-        <div>
-          <h1 class="profile__name">Jacques Cousteau<button class="btn profile__edit-button">
-              <img src="images/edit-button.svg" alt="">
-            </button></h1>
+        <div class="profile__text">
+          <h1 class="profile__name">Jacques Cousteau</h1><button class="btn profile__edit-button">
+            <img src="images/edit-button.svg" alt="">
+          </button>
           <p class="profile__about-me">Explorador</p>
         </div>
-
       </div>
       <button class="btn profile__add-button">
         <img src="images/add-button.svg" alt="">
       </button>
     </section>
+    <div class="page-mask"></div>
     <div class="popup">
       <form class="popup__container">
         <h3 class="popup__title">Editar perfil</h3>
         <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt=""></button>
         <div class="popup__text-container">
-          <input type="text" class="popup__text" placeholder="Nombre">
-          <input type="text" class="popup__text" placeholder="Acerca de mí">
+          <input id="name" type="text" class="popup__text" placeholder="Nombre">
+          <input id="about-me" type="text" class="popup__text" placeholder="Acerca de mí">
         </div>
         <button type="submit" class="btn popup__btn-save">Guardar</button>
       </form>
@@ -92,7 +91,7 @@
       <p class="footer__text">© 2022 Alrededor de los EEUU</p>
     </footer>
   </div>
-  <script></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
