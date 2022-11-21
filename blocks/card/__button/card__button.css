@@ -1,0 +1,7 @@
+.heart {
+  width: 150px;
+  stroke: var(--magenta);
+  fill: var(--grey);
+  stroke-dasharray: 54;
+  stroke-dashoffset: 54;
+}

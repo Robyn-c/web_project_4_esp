@@ -1,18 +1,18 @@
 // Abrir y cerrar popup
 let popup = document.querySelector(".popup");
-let pageMask = document.querySelector(".page-mask");
+let pageMask = document.querySelector(".page_mask");
 
 let editButton = document.querySelector(".profile__edit-button");
 let closeButton = document.querySelector(".popup__btn-close");
 
 function openPopup(e) {
   popup.classList.add("popup_opened");
-  pageMask.classList.add("page-mask_opened");
+  pageMask.classList.add("page_mask_opened");
 }
 
 function closePopup(e) {
   popup.classList.remove("popup_opened");
-  pageMask.classList.remove("page-mask_opened");
+  pageMask.classList.remove("page_mask_opened");
 }
 
 editButton.addEventListener("click", openPopup);
