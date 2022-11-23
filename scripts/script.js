@@ -22,14 +22,11 @@ closeButton.addEventListener("click", closePopup);
 const username = document.querySelector(".profile__name");
 const userAboutMe = document.querySelector(".profile__about-me");
 
-const fullName = document.querySelector("#name");
-const aboutMe = document.querySelector("#about-me");
+const nameInput = document.querySelector("#name");
+const aboutMeInput = document.querySelector("#about-me");
 
-fullName.setAttribute("value", username.textContent);
-aboutMe.setAttribute("value", userAboutMe.textContent);
-
-console.log(username.textContent);
-console.log(userAboutMe.textContent);
+nameInput.setAttribute("value", username.textContent);
+aboutMeInput.setAttribute("value", userAboutMe.textContent);
 
 // Formulario
 const formElement = document.querySelector(".popup__container");
@@ -37,13 +34,9 @@ const formElement = document.querySelector(".popup__container");
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
-  // Busquemos los campos del formulario en el DOM
-  const nameInput = document.querySelector("#name");
-  const jobInput = document.querySelector("#about-me");
-
   // Obtén los valores de cada campo desde la propiedad de valor correspondiente
   nameValue = nameInput.value;
-  jobValue = jobInput.value;
+  jobValue = aboutMeInput.value;
 
   // Selecciona los elementos donde se introducirán los valores de los campos
   username.textContent = nameValue;
