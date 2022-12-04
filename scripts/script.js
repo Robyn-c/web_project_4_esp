@@ -46,22 +46,13 @@ function handleProfileFormSubmit(evt) {
 
 formElement.addEventListener("submit", handleProfileFormSubmit);
 
-// Rellenar corazon al hacer click
-const heartButton = document.querySelectorAll(".card__heart");
-
-heartButton.forEach((heart) => {
-  heart.addEventListener("click", function handleLikeButton(event) {
-    heart.classList.toggle("card__heart_liked");
-  });
-});
-
 const cardContainer = document.querySelector(".cards");
 
 function addCard(srcValue, titleValue) {
   const cardTemplate = document.querySelector("#card").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
-  cardElement.querySelector(".card__image").setAttribute(src, srcValue);
+  cardElement.querySelector(".card__image").setAttribute("src", srcValue);
   cardElement.querySelector(".card__title").textContent = titleValue;
   cardContainer.append(cardElement);
 }
@@ -92,5 +83,24 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
-initialCards.forEach((card) => console.log(card.name));
+initialCards.forEach((card) => addCard(card.link, card.name));
 console.log(initialCards);
+
+// Rellenar corazon al hacer click
+const heartButton = document.querySelectorAll(".card__heart");
+
+heartButton.forEach((heart) => {
+  heart.addEventListener("click", function handleLikeButton(event) {
+    heart.classList.toggle("card__heart_liked");
+  });
+});
+
+// Boton para eliminar tarjetas
+const cards = document.querySelectorAll(".card");
+const cardRemoveButton = document.querySelectorAll(".card__remove");
+
+cardRemoveButton.forEach((remove) => {
+  remove.addEventListener("click", function removeButton(event) {
+    remove.parentElement.remove();
+  });
+});
