@@ -5,3 +5,8 @@
   right: -40px;
   transition: opacity 0.25s ease-in-out;
 }
+
+.popup__btn-close:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

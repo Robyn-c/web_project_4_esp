@@ -22,6 +22,7 @@ closeButton.forEach(function closePopup(item) {
   item.addEventListener("click", function () {
     editPopup.classList.remove("popup_opened");
     addPopup.classList.remove("popup_opened");
+    imgContainer.classList.remove("popup_opened");
     pageMask.classList.remove("page_mask_opened");
   });
 });
@@ -112,6 +113,7 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
+
 initialCards.forEach((card) => addCard(card.link, card.name));
 
 // Rellenar corazon al hacer click
@@ -130,5 +132,18 @@ const cardRemoveButton = document.querySelectorAll(".card__remove");
 cardRemoveButton.forEach((remove) => {
   remove.addEventListener("click", function removeButton(event) {
     remove.parentElement.remove();
+  });
+});
+
+// Popup al clickear una imagen'
+const imgPopup = document.querySelectorAll(".card__image");
+const imgContainer = document.querySelector(".img-popup");
+const cardTitle = document.querySelector(".card__title").textContent;
+
+imgPopup.forEach((image) => {
+  image.addEventListener("click", function (e) {
+    imgContainer.classList.add("popup_opened");
+    pageMask.classList.add("page_mask_opened");
+    document.querySelector(".img-popup__image").src = image.getAttribute("src");
   });
 });

@@ -77,10 +77,21 @@
         </article>
       </template>
     </section>
-    <div class="img-popup"></div>
-    <footer class="footer">
-      <p class="footer__text">© 2022 Alrededor de los EEUU</p>
-    </footer>
+    <!--    <div class="img-popup">
+      <span class="img-popup__close">&times;</span>
+      <img class="img-popup__image" src="https://code.s3.yandex.net/web-code/yosemite.jpg">
+    </div> -->
+    <div class="img-popup">
+      <div class="popup__container popup__container_img">
+        <img class="img-popup__image" src="https://code.s3.yandex.net/web-code/yosemite.jpg">
+        <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <span class="popup__span">Nuevo lugar</span>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p class="footer__text">© 2022 Alrededor de los EEUU</p>
+  </footer>
   </div>
   <script src="scripts/script.js"></script>
 </body>

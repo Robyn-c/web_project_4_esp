@@ -109,6 +109,10 @@
     width: 282px;
   }
 
+  .img-popup__image {
+    width: 80%;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
