@@ -1,5 +1,4 @@
 .edit-popup {
-  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,6 +8,9 @@
   border-radius: 10px;
   width: 420px;
   z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .add-popup {
@@ -21,8 +23,9 @@
   border-radius: 10px;
   width: 420px;
   z-index: 100;
-  visibility: none;
-  transition: visibility 1s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .popup__btn-close:hover {
@@ -54,7 +57,9 @@
 }
 
 .popup_opened {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 .popup__btn-save {
