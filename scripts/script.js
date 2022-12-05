@@ -138,12 +138,28 @@ cardRemoveButton.forEach((remove) => {
 // Popup al clickear una imagen'
 const imgPopup = document.querySelectorAll(".card__image");
 const imgContainer = document.querySelector(".img-popup");
-const cardTitle = document.querySelector(".card__title").textContent;
+const cardTitle = document.querySelectorAll(".card__title");
 
-imgPopup.forEach((image) => {
+let popupSpan = document.querySelector(".popup__span");
+/* console.log(cardTitle);
+console.log(popupSpan); */
+/* imgPopup.forEach((image) => {
   image.addEventListener("click", function (e) {
     imgContainer.classList.add("popup_opened");
     pageMask.classList.add("page_mask_opened");
     document.querySelector(".img-popup__image").src = image.getAttribute("src");
   });
-});
+}); */
+
+for (let i = 0; i < imgPopup.length; i++) {
+  /*   console.log(imgPopup[i]);
+  console.log(cardTitle[i].textContent); */
+  console.log(popupSpan.textContent);
+  imgPopup[i].addEventListener("click", function (e) {
+    popupSpan.textContent = cardTitle[i].textContent;
+    imgContainer.classList.add("popup_opened");
+    pageMask.classList.add("page_mask_opened");
+    document.querySelector(".img-popup__image").src =
+      imgPopup[i].getAttribute("src");
+  });
+}
