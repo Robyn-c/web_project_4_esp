@@ -118,10 +118,16 @@ initialCards.forEach((card) => addCard(card.link, card.name));
 
 // Rellenar corazon al hacer click
 const heartButton = document.querySelectorAll(".card__heart");
-
+let toggle = true;
 heartButton.forEach((heart) => {
   heart.addEventListener("click", function handleLikeButton(event) {
-    heart.classList.toggle("card__heart_liked");
+    // toggle
+    toggle = !toggle;
+    if (!toggle) {
+      heart.src = "/images/like-button-filled.svg";
+    } else {
+      heart.src = "/images/like-button.svg";
+    }
   });
 });
 
