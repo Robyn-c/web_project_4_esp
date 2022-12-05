@@ -32,7 +32,7 @@
     </section>
     <div class="page_mask"></div>
     <div class="edit-popup">
-      <form class="edit-popup__container">
+      <form id="edit-container" class="popup__container">
         <h3 class="popup__title">Editar perfil</h3>
         <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
         <div class="popup__text-container">
@@ -42,7 +42,17 @@
         <button type="submit" class="btn popup__btn-save">Guardar</button>
       </form>
     </div>
-
+    <div class="add-popup">
+      <form id="add-container" class="popup__container">
+        <h3 class="popup__title">Nuevo lugar</h3>
+        <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <div class="popup__text-container">
+          <input id="title" type="text" class="popup__text" placeholder="Título">
+          <input id="url" type="text" class="popup__text" placeholder="Enlace a la imagen">
+        </div>
+        <button type="submit" class="btn popup__btn-save">Crear</button>
+      </form>
+    </div>
     <section class="cards">
       <template id="card">
         <article class="card">

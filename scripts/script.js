@@ -1,22 +1,36 @@
 // Abrir y cerrar popup
-const popup = document.querySelector(".popup");
+const editPopup = document.querySelector(".edit-popup");
 const pageMask = document.querySelector(".page_mask");
 
 const editButton = document.querySelector(".profile__edit-button");
-const closeButton = document.querySelector(".popup__btn-close");
+const closeButton = document.querySelectorAll(".popup__btn-close");
 
-function openPopup(e) {
-  popup.classList.add("popup_opened");
+const addPopup = document.querySelector(".add-popup");
+const addButton = document.querySelector(".profile__add-button");
+
+editButton.addEventListener("click", function openEditPopup(e) {
+  editPopup.classList.add("popup_opened");
   pageMask.classList.add("page_mask_opened");
-}
+});
 
-function closePopup(e) {
-  popup.classList.remove("popup_opened");
+addButton.addEventListener("click", function openAddButton(e) {
+  addPopup.classList.add("popup_opened");
+  pageMask.classList.add("page_mask_opened");
+});
+
+closeButton.forEach(function closePopup(item) {
+  item.addEventListener("click", function () {
+    editPopup.classList.remove("popup_opened");
+    addPopup.classList.remove("popup_opened");
+    pageMask.classList.remove("page_mask_opened");
+  });
+});
+
+function closePopupButton() {
+  editPopup.classList.remove("popup_opened");
+  addPopup.classList.remove("popup_opened");
   pageMask.classList.remove("page_mask_opened");
 }
-
-editButton.addEventListener("click", openPopup);
-closeButton.addEventListener("click", closePopup);
 
 // Texto en el value del input
 const username = document.querySelector(".profile__name");
@@ -28,8 +42,8 @@ const aboutMeInput = document.querySelector("#about-me");
 nameInput.setAttribute("value", username.textContent);
 aboutMeInput.setAttribute("value", userAboutMe.textContent);
 
-// Formulario
-const formElement = document.querySelector(".popup__container");
+// Formulario para editar
+const editFormElement = document.querySelector("#edit-container");
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -41,10 +55,25 @@ function handleProfileFormSubmit(evt) {
   // Selecciona los elementos donde se introducirán los valores de los campos
   username.textContent = nameValue;
   userAboutMe.textContent = jobValue;
-  closePopup();
+
+  closePopupButton();
 }
 
-formElement.addEventListener("submit", handleProfileFormSubmit);
+editFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+// Formulario para añadir
+const titleInput = document.querySelector("#title");
+const urlInput = document.querySelector("#url");
+
+const addFormElement = document.querySelector("#add-container");
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+  addCard(urlInput.value, titleInput.value);
+  closePopupButton();
+}
+
+addFormElement.addEventListener("submit", handleAddCardSubmit);
 
 const cardContainer = document.querySelector(".cards");
 
@@ -84,7 +113,6 @@ const initialCards = [
   },
 ];
 initialCards.forEach((card) => addCard(card.link, card.name));
-console.log(initialCards);
 
 // Rellenar corazon al hacer click
 const heartButton = document.querySelectorAll(".card__heart");

@@ -1,4 +1,4 @@
-.popup {
+.edit-popup {
   display: none;
   position: absolute;
   top: 50%;
@@ -8,6 +8,21 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   width: 420px;
+  z-index: 100;
+}
+
+.add-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 420px;
+  z-index: 100;
+  visibility: none;
+  transition: visibility 1s ease-in-out;
 }
 
 .popup__btn-close:hover {
