@@ -3,7 +3,7 @@ const editPopup = document.querySelector(".edit-popup");
 const pageMask = document.querySelector(".page_mask");
 
 const editButton = document.querySelector(".profile__edit-button");
-const closeButton = document.querySelectorAll(".popup__btn-close");
+const closeButton = document.querySelectorAll(".btn_close");
 
 const addPopup = document.querySelector(".add-popup");
 const addButton = document.querySelector(".profile__add-button");
