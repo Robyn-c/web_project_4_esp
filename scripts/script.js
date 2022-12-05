@@ -123,7 +123,7 @@ heartButton.forEach((heart) => {
   heart.addEventListener("click", function handleLikeButton(event) {
     // toggle
     toggle = !toggle;
-    if (!toggle) {
+    if (toggle) {
       heart.src = "/images/like-button-filled.svg";
     } else {
       heart.src = "/images/like-button.svg";
