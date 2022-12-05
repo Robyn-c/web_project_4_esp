@@ -135,31 +135,19 @@ cardRemoveButton.forEach((remove) => {
   });
 });
 
-// Popup al clickear una imagen'
-const imgPopup = document.querySelectorAll(".card__image");
+// Popup al clickear una imagen
+const imagesPopup = document.querySelectorAll(".card__image");
 const imgContainer = document.querySelector(".img-popup");
-const cardTitle = document.querySelectorAll(".card__title");
+const cardTitles = document.querySelectorAll(".card__title");
 
 let popupSpan = document.querySelector(".popup__span");
-/* console.log(cardTitle);
-console.log(popupSpan); */
-/* imgPopup.forEach((image) => {
-  image.addEventListener("click", function (e) {
-    imgContainer.classList.add("popup_opened");
-    pageMask.classList.add("page_mask_opened");
-    document.querySelector(".img-popup__image").src = image.getAttribute("src");
-  });
-}); */
 
-for (let i = 0; i < imgPopup.length; i++) {
-  /*   console.log(imgPopup[i]);
-  console.log(cardTitle[i].textContent); */
-  console.log(popupSpan.textContent);
-  imgPopup[i].addEventListener("click", function (e) {
-    popupSpan.textContent = cardTitle[i].textContent;
+for (let i = 0; i < imagesPopup.length; i++) {
+  imagesPopup[i].addEventListener("click", function (e) {
+    popupSpan.textContent = cardTitles[i].textContent;
     imgContainer.classList.add("popup_opened");
     pageMask.classList.add("page_mask_opened");
     document.querySelector(".img-popup__image").src =
-      imgPopup[i].getAttribute("src");
+      imagesPopup[i].getAttribute("src");
   });
 }
