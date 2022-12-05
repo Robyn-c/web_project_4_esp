@@ -140,7 +140,7 @@ const imagesPopup = document.querySelectorAll(".card__image");
 const imgContainer = document.querySelector(".img-popup");
 const cardTitles = document.querySelectorAll(".card__title");
 
-let popupSpan = document.querySelector(".popup__span");
+let popupSpan = document.querySelector(".img-popup__span");
 
 for (let i = 0; i < imagesPopup.length; i++) {
   imagesPopup[i].addEventListener("click", function (e) {
