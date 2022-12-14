@@ -31,7 +31,7 @@ body {
   color: #ffffff;
 }
 
-.page_mask {
+.page-mask {
   display: none;
   position: fixed;
   left: 0;
