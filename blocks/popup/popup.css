@@ -15,7 +15,7 @@
 
 .edit-popup__container {
   position: relative;
-  padding: 25px 36px;
+  padding: 25px 36px 36px;
   width: 100%;
 }
 
@@ -196,4 +196,34 @@
 .popup__btn-save:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.edit-popup__text:valid {
+  border-bottom: 1px solid green;
+}
+
+.edit-popup__text:invalid {
+  border-bottom: 1px solid red;
+}
+
+.add-popup__text:valid {
+  border-bottom: 1px solid green;
+}
+
+.add-popup__text:invalid {
+  border-bottom: 1px solid red;
+}
+
+.form__input-error {
+  color: rgba(255, 0, 0, 1);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.button_inactive {
+  pointer-events: none;
+  background-color: #ffffff;
+  opacity: 0.2;
+  border: 1px solid #000000;
+  color: #000000;
 }

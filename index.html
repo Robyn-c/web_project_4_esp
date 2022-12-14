@@ -15,7 +15,7 @@
     <header class="header">
       <img src="images/logo.svg" alt="Around the Us logo" class="header__logo">
     </header>
-    <div class="page page_mask"></div>
+    <div class="page_mask"></div>
     <section class="profile">
       <div class="profile__info">
         <img src="images/profile-pic.png" alt="Foto de perfil del Usuario" class="profile__picture">
@@ -33,25 +33,33 @@
     </section>
 
     <div class="edit-popup">
-      <form id="edit-container" class="edit-popup__container">
+      <form novalidate id="form" class="edit-popup__container">
         <h3 class="edit-popup__title">Editar perfil</h3>
         <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
         <div class="edit-popup__text-container">
-          <input id="name" type="text" class="edit-popup__text" placeholder="Nombre">
-          <input id="about-me" type="text" class="edit-popup__text" placeholder="Acerca de mí">
+          <input required type="text" minlength="2" maxlength="40" id="name-input" type="text"
+            class="form__input edit-popup__text" placeholder="Nombre">
+          <span class="form__input-error name-input-error"></span>
+          <input required type="text" minlength="2" maxlength="200" id="aboutme-input" type="text"
+            class="form__input edit-popup__text" placeholder="Acerca de mí">
+          <span class="form__input-error aboutme-input-error"></span>
         </div>
-        <button type="submit" class="btn edit-popup__btn-save">Guardar</button>
+        <button type="submit" class="form__submit btn edit-popup__btn-save">Guardar</button>
       </form>
     </div>
     <div class="add-popup">
-      <form id="add-container" class="add-popup__container">
+      <form id="form" class="add-popup__container">
         <h3 class="add-popup__title">Nuevo lugar</h3>
         <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
         <div class="add-popup__text-container">
-          <input id="title" type="text" class="add-popup__text" placeholder="Título">
-          <input id="url" type="text" class="add-popup__text" placeholder="Enlace a la imagen">
+          <input required type="text" minlength="2" maxlength="30" id="title-input" type="text"
+            class="form__input add-popup__text" placeholder="Título">
+          <span class="form__input-error title-input-error"></span>
+          <input required type="url" id="url-input" type="text" class="form__input add-popup__text"
+            placeholder="Enlace a la imagen">
+          <span class="form__input-error url-input-error"></span>
         </div>
-        <button type="submit" class="btn add-popup__btn-save">Crear</button>
+        <button type="submit" class="form__submit btn add-popup__btn-save">Crear</button>
       </form>
     </div>
     <section class="cards">
