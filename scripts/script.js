@@ -2,7 +2,7 @@
 const editPopup = document.querySelector(".edit-popup");
 
 // Funcion para cerrar al hacer click afuera del popup
-const pageMask = document.querySelector(".page_mask");
+const pageMask = document.querySelector(".page-mask");
 pageMask.addEventListener("click", closePopupButton);
 document.addEventListener("keydown", (evt) => {
   if (evt.key === "Escape") {
