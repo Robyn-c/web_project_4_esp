@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="vendor/normalize.css">
   <link rel="stylesheet" href="pages/index.css">
   <title>Around the US</title>
 </head>
@@ -28,7 +27,8 @@
       </div>
       <button class="btn profile__add-button">
         <img class="profile__button-img" src="images/add-button.svg" alt="Boton para añadir">
-        <img class="profile__button-img profile__button-img_rectangle" src="images/add-button_rectangle.svg" alt="">
+        <img class="profile__button-img profile__button-img_rectangle" src="images/add-button_rectangle.svg"
+          alt="Boton para añadir rectangular">
       </button>
     </section>
 
@@ -65,18 +65,18 @@
     <section class="cards">
       <template id="card">
         <article class="card">
-          <img class="card__image">
-          <img class="card__remove" src="/images/trash.svg" alt="">
+          <img class="card__image" alt="Imagen de Card">
+          <img class="card__remove" src="/images/trash.svg" alt="Boton para Borrar">
           <div class="card__text">
             <h3 class="card__title"></h3>
-            <img class="card__heart" src="/images/like-button.svg" alt="">
+            <img class="card__heart" src="/images/like-button.svg" alt="Boton para dar like">
           </div>
         </article>
       </template>
     </section>
     <div class="img-popup">
       <div class="img-popup__container">
-        <img class="img-popup__image" src=" ">
+        <img class="img-popup__image" src="">
         <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
         <span class="img-popup__span">Nuevo lugar</span>
       </div>
@@ -86,7 +86,8 @@
       <p class="footer__text">© 2022 Alrededor de los EEUU</p>
     </footer>
   </div>
-  <script src="scripts/script.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/validate.js"></script>
 </body>
 
 </html>
