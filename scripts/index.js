@@ -98,8 +98,10 @@ function addCard(srcValue, titleValue) {
   cardElement.querySelector(".card__image").setAttribute("alt", titleValue);
   cardElement.querySelector(".card__image").setAttribute("src", srcValue);
   cardElement.querySelector(".card__title").textContent = titleValue;
-  cardContainer.append(cardElement);
+  cardContainer.prepend(cardElement);
   heartButton();
+  addTrashButton();
+  addImagePopup();
 }
 
 const initialCards = [
@@ -149,30 +151,30 @@ function heartButton() {
 }
 
 // Boton para eliminar tarjetas
-const cards = document.querySelectorAll(".card");
-const cardRemoveButton = document.querySelectorAll(".card__remove");
-
-cardRemoveButton.forEach((remove) => {
-  remove.addEventListener("click", function removeButton(event) {
-    remove.parentElement.remove();
+function addTrashButton() {
+  const cardRemoveButton = document.querySelectorAll(".card__remove");
+  cardRemoveButton.forEach((remove) => {
+    remove.addEventListener("click", function removeButton(event) {
+      remove.parentElement.remove();
+    });
   });
-});
+}
 
 // Popup al clickear una imagen
-const imagesPopup = document.querySelectorAll(".card__image");
 const imgContainer = document.querySelector(".img-popup");
-const cardTitles = document.querySelectorAll(".card__title");
-
-const popupSpan = document.querySelector(".img-popup__span");
-
-for (let i = 0; i < imagesPopup.length; i++) {
-  imagesPopup[i].addEventListener("click", function (e) {
-    popupSpan.textContent = cardTitles[i].textContent;
-    imgContainer.classList.add("popup_opened");
-    pageMask.classList.add("page_mask_opened");
-    document.addEventListener("keydown", escapeKeyListener);
-    document.querySelector(".img-popup__image").src =
-      imagesPopup[i].getAttribute("src");
-    document.querySelector(".img-popup__image").alt = popupSpan.textContent;
-  });
+function addImagePopup() {
+  const imagesPopup = document.querySelectorAll(".card__image");
+  const cardTitles = document.querySelectorAll(".card__title");
+  const popupSpan = document.querySelector(".img-popup__span");
+  for (let i = 0; i < imagesPopup.length; i++) {
+    imagesPopup[i].addEventListener("click", function (e) {
+      popupSpan.textContent = cardTitles[i].textContent;
+      imgContainer.classList.add("popup_opened");
+      pageMask.classList.add("page_mask_opened");
+      document.addEventListener("keydown", escapeKeyListener);
+      document.querySelector(".img-popup__image").src =
+        imagesPopup[i].getAttribute("src");
+      document.querySelector(".img-popup__image").alt = popupSpan.textContent;
+    });
+  }
 }
