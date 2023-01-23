@@ -1,3 +1,5 @@
+import { Card } from "./Card.js";
+
 // Abrir y cerrar popup
 const editPopup = document.querySelector(".edit-popup");
 
