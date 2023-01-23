@@ -66,8 +66,8 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
   // Obtén los valores de cada campo desde la propiedad de valor correspondiente
-  nameValue = nameInput.value;
-  jobValue = aboutMeInput.value;
+  let nameValue = nameInput.value;
+  let jobValue = aboutMeInput.value;
 
   // Selecciona los elementos donde se introducirán los valores de los campos
   username.textContent = nameValue;
