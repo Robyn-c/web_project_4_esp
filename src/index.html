@@ -31,10 +31,10 @@
       </button>
     </section>
 
-    <div class="edit-popup popup_edit_profile">
+    <div id="popup_edit_profile" class="edit-popup">
       <form novalidate class="form edit-popup__container">
         <h3 class="edit-popup__title">Editar perfil</h3>
-        <button class="btn btn_close"><img class="popup__btn-close" src="<%=require('./images/close-icon.svg')%>"
+        <button class="btn btn_close"><img class="btn_close__img" src="<%=require('./images/close-icon.svg')%>"
             alt="Boton para cerrar"></button>
         <div class="edit-popup__text-container">
           <input required name="name" type="text" minlength="2" maxlength="40" id="name-input"
@@ -47,8 +47,8 @@
         <button type="submit" class="form__submit btn edit-popup__btn-save">Guardar</button>
       </form>
     </div>
-    <div class="add-popup popup_add_card">
-      <button class="btn btn_close"><img class="popup__btn-close" src="<%=require('./images/close-icon.svg')%>"
+    <div id="popup_add_card" class="add-popup">
+      <button class="btn btn_close"><img class="btn_close__img" src="<%=require('./images/close-icon.svg')%>"
           alt="Boton para cerrar"></button>
       <form class="form add-popup__container">
         <h3 class="add-popup__title">Nuevo lugar</h3>
@@ -78,7 +78,7 @@
     <div class="img-popup">
       <div class="img-popup__container">
         <img class="img-popup__image" src=" ">
-        <button class="btn btn_close"><img class="popup__btn-close" src="<%=require('./images/close-icon.svg')%>"
+        <button class="btn btn_close"><img class="btn_close__img" src="<%=require('./images/close-icon.svg')%>"
             alt="Boton para cerrar"></button>
         <span class="img-popup__span">Nuevo lugar</span>
       </div>

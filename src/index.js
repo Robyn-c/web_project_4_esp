@@ -16,10 +16,10 @@ import previewPopup from "./scripts/PopupWithImage.js";
 
 import "./index.css";
 
-export const addCardPopup = new Popup(".popup_add_card");
+export const addCardPopup = new Popup("#popup_add_card");
 
 export const editPopup = new PopupWithForm(
-  ".popup_edit_profile",
+  "#popup_edit_profile",
   updateUserInfo
 );
 

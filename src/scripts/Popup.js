@@ -27,7 +27,7 @@ export default class Popup {
       this.close();
     });
 
-    document.querySelectorAll(".popup__btn-close").forEach((item) => {
+    document.querySelectorAll(".btn_close__img").forEach((item) => {
       item.addEventListener("click", () => {
         this.close();
       });
