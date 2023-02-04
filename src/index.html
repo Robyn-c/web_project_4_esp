@@ -5,53 +5,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="pages/index.css">
   <title>Around the US</title>
 </head>
 
 <body>
   <div class="page">
     <header class="header">
-      <img src="images/logo.svg" alt="Around the Us logo" class="header__logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="Around the Us logo" class="header__logo">
     </header>
     <div class="page-mask"></div>
     <section class="profile">
       <div class="profile__info">
-        <img src="images/profile-pic.png" alt="Foto de perfil del Usuario" class="profile__picture">
+        <img src="<%=require('./images/profile-pic.png')%>" alt="Foto de perfil del Usuario" class="profile__picture">
         <div class="profile__text">
           <h1 class="profile__name">Jacques Cousteau</h1><button class="btn profile__edit-button">
-            <img src="images/edit-button.svg" alt="Boton para editar">
+            <img src="<%=require('./images/edit-button.svg')%>" alt="Boton para editar">
           </button>
           <p class="profile__about-me">Explorador</p>
         </div>
       </div>
       <button class="btn profile__add-button">
-        <img class="profile__button-img" src="images/add-button.svg" alt="Boton para añadir">
-        <img class="profile__button-img profile__button-img_rectangle" src="images/add-button_rectangle.svg"
-          alt="Boton para añadir rectangular">
+        <img class="profile__button-img" src="<%=require('./images/add-button.svg')%>" alt="Boton para añadir">
+        <img class="profile__button-img profile__button-img_rectangle"
+          src="<%=require('./images/add-button_rectangle.svg')%>" alt="Boton para añadir rectangular">
       </button>
     </section>
 
-    <div class="edit-popup">
+    <div class="edit-popup popup_edit_profile">
       <form novalidate class="form edit-popup__container">
         <h3 class="edit-popup__title">Editar perfil</h3>
-        <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <button class="btn btn_close"><img class="popup__btn-close" src="<%=require('./images/close-icon.svg')%>"
+            alt="Boton para cerrar"></button>
         <div class="edit-popup__text-container">
-          <input required type="text" minlength="2" maxlength="40" id="name-input" class="form__input edit-popup__text"
-            placeholder="Nombre">
+          <input required name="name" type="text" minlength="2" maxlength="40" id="name-input"
+            class="form__input edit-popup__text" placeholder="Nombre">
           <span class="form__input-error name-input-error"></span>
-          <input required type="text" minlength="2" maxlength="200" id="aboutme-input"
+          <input required name="about" type="text" minlength="2" maxlength="200" id="aboutme-input"
             class="form__input edit-popup__text" placeholder="Acerca de mí">
           <span class="form__input-error aboutme-input-error"></span>
         </div>
         <button type="submit" class="form__submit btn edit-popup__btn-save">Guardar</button>
       </form>
     </div>
-    <div class="add-popup">
-      <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+    <div class="add-popup popup_add_card">
+      <button class="btn btn_close"><img class="popup__btn-close" src="<%=require('./images/close-icon.svg')%>"
+          alt="Boton para cerrar"></button>
       <form class="form add-popup__container">
         <h3 class="add-popup__title">Nuevo lugar</h3>
-
         <div class="add-popup__text-container">
           <input required type="text" minlength="2" maxlength="30" id="title-input" class="form__input add-popup__text"
             placeholder="Título">
@@ -67,10 +67,10 @@
       <template id="card">
         <article class="card">
           <img class="card__image" alt="Imagen de Card">
-          <img class="card__remove" src="/images/trash.svg" alt="Boton para Borrar">
+          <img class="card__remove" src="<%=require('./images/trash.svg')%>" alt="Boton para Borrar">
           <div class="card__text">
             <h3 class="card__title"></h3>
-            <img class="card__heart" src="/images/like-button.svg" alt="Boton para dar like">
+            <img class="card__heart" src="<%=require('./images/like-button.svg')%>" alt="Boton para dar like">
           </div>
         </article>
       </template>
@@ -78,7 +78,8 @@
     <div class="img-popup">
       <div class="img-popup__container">
         <img class="img-popup__image" src=" ">
-        <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <button class="btn btn_close"><img class="popup__btn-close" src="<%=require('./images/close-icon.svg')%>"
+            alt="Boton para cerrar"></button>
         <span class="img-popup__span">Nuevo lugar</span>
       </div>
     </div>
@@ -87,11 +88,6 @@
       <p class="footer__text">© 2022 Alrededor de los EEUU</p>
     </footer>
   </div>
-  <script type="module" src="scripts/Card.js"></script>
-  <script type="module" src="scripts/FormValidator.js"></script>
-  <script type="module" src="scripts/index.js"></script>
-  <script type="module" src="scripts/utils.js"></script>
-
 </body>
 
 </html>

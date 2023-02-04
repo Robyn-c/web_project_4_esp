@@ -1,40 +1,40 @@
-@import url(/vendor/normalize.css);
-@import url(/fonts/inter.css);
+@import url(./normalize.css);
+@import url(./fonts/inter.css);
 
 /* page */
-@import url(/blocks/page/page.css);
+@import url(./blocks/page/page.css);
 
 /* header */
-@import url(/blocks/header/header.css);
-@import url(/blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
 
 /* profile */
-@import url(/blocks/profile/profile.css);
-@import url(/blocks/profile/about-me/profile__about-me.css);
-@import url(/blocks/profile/__text/profile__text.css);
-@import url(/blocks/profile/__picture/profile__picture.css);
-@import url(/blocks/profile/__name/profile__name.css);
-@import url(/blocks/profile/__info/profile__info.css);
-@import url(/blocks/profile/__edit-button/profile__edit-button.css);
-@import url(/blocks/profile/__add-button/profile__add-button.css);
-@import url(/blocks/profile/__button-img/profile__button-img.css);
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/about-me/profile__about-me.css);
+@import url(./blocks/profile/__text/profile__text.css);
+@import url(./blocks/profile/__picture/profile__picture.css);
+@import url(./blocks/profile/__name/profile__name.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__edit-button/profile__edit-button.css);
+@import url(./blocks/profile/__add-button/profile__add-button.css);
+@import url(./blocks/profile/__button-img/profile__button-img.css);
 
 /* popup */
-@import url(/blocks/popup/popup.css);
-@import url(/blocks/popup/__container/popup__container.css);
-@import url(/blocks/popup/__btn-close/popup__btn-close.css);
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/__container/popup__container.css);
+@import url(./blocks/popup/__btn-close/popup__btn-close.css);
 
 /* cards */
-@import url(/blocks/cards/cards.css);
-@import url(/blocks/card/card.css);
-@import url(/blocks/card/__title/card__title.css);
-@import url(/blocks/card/__text/card__text.css);
-@import url(/blocks/card/__image/card__image.css);
-@import url(/blocks/card/__button/card__heart.css);
-@import url(/blocks/card/__remove/card__remove.css);
+@import url(./blocks/cards/cards.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__title/card__title.css);
+@import url(./blocks/card/__text/card__text.css);
+@import url(./blocks/card/__image/card__image.css);
+@import url(./blocks/card/__button/card__heart.css);
+@import url(./blocks/card/__remove/card__remove.css);
 
 /* footer */
-@import url(/blocks/footer/footer.css);
+@import url(./blocks/footer/footer.css);
 
 @media screen and (max-width: 1280px) {
   .header__logo {
