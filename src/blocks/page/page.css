@@ -1,54 +1,22 @@
 .page {
+  padding: 45px 0 60px;
   max-width: 880px;
+  width: 95%;
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-p,
-a {
-  margin: 0;
+/* TABLET */
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .page {
+    padding: 45px 0 60px;
+    box-sizing: border-box;
+  }
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.page-mask {
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.page_mask_opened {
-  display: block;
-}
-
-.btn {
-  border: none;
-  background: none;
-  margin: 0;
-  padding: 0;
+/* MOBILE*/
+@media screen and (min-width: 5px) and (max-width: 550px) {
+  .page {
+    /* max-width: 320px; */
+    padding: 0;
+  }
 }
