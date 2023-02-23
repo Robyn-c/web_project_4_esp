@@ -35,7 +35,6 @@ import Api from "../components/Api.js";
 
 //VARIABLE: ABRIR la MODAL (SELECCIONO EL BOTÓN)
 const openEditButton = document.getElementById("open-edit-button"); //seleciono botón edit con ID
-// const openAddButton = document.getElementById("open-add-button"); //seleciono botón + con ID
 
 //VARIABLE: MOSTRAR NOMBRE DE INPUTS EN PERFIL (a traves de su name)
 const popuProfileForm = new PopupWithForm(
@@ -118,7 +117,6 @@ function handleAvatarFormSubmit(data) {
 const popupImageObject = new PopupWithImage(popupImage);
 
 function handleCardClick(event) {
-  //const popup = new PopupWithImage(popupImage);
   popupImageObject.open(this._name, this._link);
 }
 

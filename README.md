@@ -24,7 +24,7 @@ Se utiliza BEM para organizar las hojas de estilo e importarlas al _index.css_ y
 
 **Enlace**
 
-Enlace al proyecto terminado: [Proyecto 4](https://scuadra02.github.io/)
+Enlace al proyecto terminado: [Proyecto 4](https://scuadra02.github.io/web_project_4_esp/)
 
 **Figma**
 

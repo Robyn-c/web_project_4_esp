@@ -18,10 +18,6 @@ export const configCardSelectors = {
   popupImageSelector: ".image-container__image-popup", //IMAGEN DEL POPUP
   likeButton: ".card__card-like", //LIKE BUTTON
   likeCounter: document.getElementById("countLikes"), //CONTADOR DE LIKES
-  //removeButton: ".card__delete-button", //DELETE BUTTON
-
-  //  imagePopupTitle = "#addTitle",  //TITULO IMAGEN
-  //  imagePopupImage = "#addImage",  //URL de IMAGEN
 };
 
 //VARIABLES PARA LIKES:
@@ -65,19 +61,18 @@ export const profileAvatar = document.querySelector(".profile__avatar");
 //VARIABLES: MODAL AVATAR (por ID)
 export const popupAvatar = document.getElementById("popupAvatar"); //popup avatar
 
-export const avatarEditButton = document.querySelector('.profile__avatar-edit'); //botón avatar
-
+export const avatarEditButton = document.querySelector(".profile__avatar-edit"); //botón avatar
 
 //VARIABLE: POP UP DELETE CARD
 export const popupDelete = document.getElementById("popupDelete");
 
-export const removeButtons = document.querySelectorAll(configCardSelectors.removeButton);
-
-
-
+export const removeButtons = document.querySelectorAll(
+  configCardSelectors.removeButton
+);
 
 //VARIABLE: TEXTO Y LINK DE LAS CARDS
-export const initialCards = [{
+export const initialCards = [
+  {
     name: "Valle de Yosemite",
     link: "https://code.s3.yandex.net/web-code/yosemite.jpg",
   },
